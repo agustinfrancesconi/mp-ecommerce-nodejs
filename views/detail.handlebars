@@ -84,7 +84,15 @@
                                     {{ unit }}
                                 </h3>
                             </div>
-                            <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
+                            <form action="/pay" method="POST">
+                                <script
+                                src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js"
+                                data-preference-id="{{preference_id}}"
+                                data-elements-color="#2D3277"
+                                data-button-label="Pagar la compra"
+                                >
+                                </script>
+                            </form>
                         </div>
                     </div>
                 </div>
