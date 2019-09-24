@@ -95,12 +95,12 @@ const getPreferenceId = ({title = 'Title genérico', price = 1000, img}) => {
             },
             "external_reference": 'ABCD1234',
             "back_urls": {
-                "success": "https://nicorodrigues-mp-commerce-node.herokuapp.com//payments/success",
-                "failure": "https://nicorodrigues-mp-commerce-node.herokuapp.com//payments/failure",
-                "pending": "https://nicorodrigues-mp-commerce-node.herokuapp.com//payments/pending"
+                "success": "https://nicorodrigues-mp-commerce-node.herokuapp.com/payments/success",
+                "failure": "https://nicorodrigues-mp-commerce-node.herokuapp.com/payments/failure",
+                "pending": "https://nicorodrigues-mp-commerce-node.herokuapp.com/payments/pending"
             },
             "auto_return": "approved",
-            "notification_url": "https://nicorodrigues-mp-commerce-node.herokuapp.com//notifications"
+            "notification_url": "https://nicorodrigues-mp-commerce-node.herokuapp.com/notifications"
         };
         
         MP.preferences.create(preference)
