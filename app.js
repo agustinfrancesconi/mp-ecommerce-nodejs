@@ -14,6 +14,10 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
 
+app.get('/checkout', function (req, res) {
+    res.render('checkout', req.query);
+});
+
 app.use(express.static('assets'));
  
 app.use('/assets', express.static(__dirname + '/assets'));
