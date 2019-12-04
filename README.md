@@ -1,37 +1,36 @@
-# mp-ecommerce
+# mp-ecommerce-nodejs
 
-Este e-commerce de ejemplo será la base para la integración de MercadoPago con `nodejs`.
+Este e-commerce de exemplo será a base para a integração de Mercado Pago com `nodejs`.
 
-## Antes de comenzar
+## Antes de começar
 
-Esta aplicación debe estar accesible mediante un dominio público en internet antes de comenzar con la integración y para ello usaremos [Heroku](https://heroku.com).
+Essa aplicação deve ser acessível por um domínio público na internet, e para isso usaremos o [Heroku](https://heroku.com).
 
-Requisitos para realizar la integración: 
-* Cuenta en GitHub.
-* Cuenta en [Heroku](https://heroku.com).
+Requisitos para realizar a integração: 
+* Possuir conta no [GitHub](http://github.com).
+* Possuir conta no [Heroku](https://heroku.com).
+* Possuir conta no [Mercado Pago](https://www.mercadopago.com.br).
 
-## Haciendo pública mi e-commerce de ejemplo
+## Tornando público meu e-commerce de exemplo
 
-1. Realizar un fork de este proyecto. Considerando que tu usuario de GitHub es `username`, tendremos el repositorio https://github.com/username/mp-ecommerce-nodejs
-2. Ingresar a tu cuenta de Heroku
-3. Crear una aplicación en Heroku para realizar el deploy de nuestro e-commerce. Nombrarla de la siguiente manera *username*-mp-commerce-nodejs. Ejemplo:
+1. Realizar un fork desse projeto. Considerando que seu usuário de GitHub é `username`, teremos o repositório https://github.com/username/mp-ecommerce-nodejs
+2. Acessar sua conta do Heroku
+3. Criar uma aplicação no Heroku para realizar o deploy de nosso e-commerce. Nomea-la da seguinte maneira *username*-mp-commerce-nodejs. Exemplo:
 <div style="text-align: center;" >
 <img src="docs/step0.png" width=400 />
 </div>
 
-4. Conectar a nuestra aplicación en Heroku el repositorio "forkeado" en el paso 1
+4. Conectar nossa aplicação "forkeada" no passo 1 ao Heroku.
 <div style="text-align: center;" >
 <img src="docs/step1.png" width=800 />
 </div>
 
-5. Activar el deploy autómatico ante cualquier cambio en el branch "master". Realizar un deploy manualmente, mediante la opción "Deploy branch" para comprobar que la app esté funcionando correctamente.
-
+5. Ativar o deploy automático antes de qualquer alteração na branch "master". Realizar um deploy manualmente, através da opção "Deploy branch" para comprovar que a app está funcionando corretamente.
 <div style="text-align: center;" >
 <img src="docs/step2.png" width=800 />
 </div>
 
-6. Nuevamente considerando que tu usuario de GitHub es `username` (substituir en la URL por el correcto), acceder a https://username-mp-ecommerce-nodejs.herokuapp.com/ y validar que la app esté corriendo. Deberás visualizar algo como lo siguiente
-
+6. Novamente considerando que seu usuário do GitHub é `username` (substituir na URL pelo correto), acessar https://username-mp-ecommerce-nodejs.herokuapp.com/ e validar que a app está em execução. Deverá vizualizar algo como o seguinte:
 <div style="text-align: center;" >
 <img src="docs/step3.png" width=800 />
 </div>
