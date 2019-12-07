@@ -121,7 +121,7 @@
                                         <input type="submit" value="Pay">
                                     </form> --}}
 
-                                    <form action="/processar_pagamento" method="post" id="pay" name="pay" >
+                                    <form action="/pay" method="post" id="pay" name="pay" >
                                         <fieldset>
                                             <ul>
                                                 <li>
@@ -165,8 +165,8 @@
                                                 </select>
                                             </li>
                                             </ul>
-                                            <input type="hidden" name="amount" id="amount"/>
-                                            <input type="hidden" name="description"/>
+                                            <input type="hidden" name="amount" id="amount" value={{price}}/>
+                                            <input type="hidden" name="description"  value={{ title }}/>
                                             <input type="hidden" name="paymentMethodId" />
                                             <input type="submit" value="Pay!" />
                                         </fieldset>
@@ -182,8 +182,11 @@
     </div>
 </div>
 
+<script src="https://secure.mlstatic.com/sdk/javascript/v1/mercadopago.js"></script>
 <script>
     
+    window.Mercadopago.setPublishableKey("TEST-faebd75e-b4ce-4884-b72d-e66e394fc207");
+
     window.Mercadopago.getIdentificationTypes();
 
     function addEvent(to, type, fn){ 
@@ -264,6 +267,7 @@ function doPay(event){
 
 function sdkResponseHandler(status, response) {
     if (status != 200 && status != 201) {
+        console.log(response);
         alert("verify filled data");
     }else{
         var form = document.querySelector('#pay');
@@ -276,5 +280,25 @@ function sdkResponseHandler(status, response) {
         form.submit();
     }
 };
+
+
+function setInstallmentInfo(status, response) {
+        var selectorInstallments = document.querySelector("#installments"),
+        fragment = document.createDocumentFragment();
+        selectorInstallments.options.length = 0;
+
+        if (response.length > 0) {
+            var option = new Option("Escolha...", '-1'),
+            payerCosts = response[0].payer_costs;
+            fragment.appendChild(option);
+
+            for (var i = 0; i < payerCosts.length; i++) {
+                fragment.appendChild(new Option(payerCosts[i].recommended_message, payerCosts[i].installments));
+            }
+
+            selectorInstallments.appendChild(fragment);
+            selectorInstallments.removeAttribute('disabled');
+        }
+    };
 
 </script>
