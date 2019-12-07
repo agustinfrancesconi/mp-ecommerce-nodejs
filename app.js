@@ -19,4 +19,8 @@ app.get('/detail', function (req, res) {
     res.render('detail', req.query);
 });
 
+app.post('/pay', async function (req, res) {
+    
+})
+
 app.listen(port);
