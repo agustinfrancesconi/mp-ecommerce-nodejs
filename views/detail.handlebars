@@ -97,6 +97,9 @@
 
                             function addEvent(to, type, fn) {
                                 if (document.addEventListener) {
+
+                                    console.log(type, fn, false)
+                                    
                                     to.addEventListener(type, fn, false);
                                 } else if (document.attachEvent) {
                                     to.attachEvent('on' + type, fn);
